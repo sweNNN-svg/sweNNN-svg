@@ -22,11 +22,6 @@
   <img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white" />
 </p>
 
-## 📈 GitHub Stats
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sweNNN-svg&show_icons=true&theme=radical" alt="github stats" />
-</p>
-
 ## 📌 Featured Projects
 <p align="center">
   🔹 [Amazon Web Scraping](https://github.com/sweNNN-svg/Amazon-Web-Scraping) - Extracting product data using Python and BeautifulSoup.
