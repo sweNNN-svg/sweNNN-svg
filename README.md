@@ -30,4 +30,4 @@
 ## 📬 Connect with Me
 📧 **Email:** emre.ofleep@gmail.com 
 🔗 **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/emre-h)  
-🐦 **Twitter:** [@yourhandle]([https://twitter.com/yourhandle](https://x.com/EmreHacioglu61)) 
+ **Twitter:** [@EmreHacioglu61](https://x.com/EmreHacioglu61) 
