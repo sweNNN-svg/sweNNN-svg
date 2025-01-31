@@ -27,6 +27,15 @@
   <img src="https://github-readme-stats.vercel.app/api?username=sweNNN-svg&show_icons=true&theme=radical" alt="github stats" />
 </p>
 
+## 📌 Featured Projects
+<p align="center">
+  🔹 [Amazon Web Scraping](https://github.com/sweNNN-svg/Amazon-Web-Scraping) - Extracting product data using Python and BeautifulSoup.
+  
+  🔹 [Caykur Data Analysis](https://github.com/sweNNN-svg/CaykurDataAnalysis) - Analyzing and visualizing company data.
+  
+  🔹 [Youtube Video Downloader](https://github.com/sweNNN-svg/YoutubeVideoDowloaderDemo) - A Python tool for downloading YouTube videos.
+</p>
+
 ## 📬 Connect with Me
 📧 **Email:** emre.ofleep@gmail.com 
 🔗 **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/emre-h)  
