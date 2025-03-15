@@ -24,11 +24,13 @@
 
 ## 📌 Featured Projects
 <p align="center">
+  🔹 [DevOps School Workshop](https://github.com/sweNNN-svg/DevOps-School-Workshop-TR) - Some DevOps basic notes from workshop.
+  
   🔹 [Amazon Web Scraping](https://github.com/sweNNN-svg/Amazon-Web-Scraping) - Extracting product data using Python and BeautifulSoup.
   
-  🔹 [Caykur Data Analysis](https://github.com/sweNNN-svg/CaykurDataAnalysis) - Analyzing and visualizing company data.
+  🔹 [DATA ETL]([https://github.com/sweNNN-svg/CaykurDataAnalysis](https://github.com/sweNNN-svg/Anime-Data-ETL-to-PostgreSQL)) - Processing an anime dataset with an ETL pipeline to PostgreSQL.
   
-  🔹 [Youtube Video Downloader](https://github.com/sweNNN-svg/YoutubeVideoDowloaderDemo) - A Python tool for downloading YouTube videos.
+  🔹 [ArayuzWithPython](https://github.com/sweNNN-svg/ArayuzWithPython) - ArayuzWithPython.
 </p>
 
 ## 📬 Connect with Me
