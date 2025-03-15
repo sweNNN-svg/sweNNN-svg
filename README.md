@@ -24,6 +24,7 @@
 
 ## 📌 Featured Projects
 <p align="center">
+
   🔹 [DevOps School Workshop](https://github.com/sweNNN-svg/DevOps-School-Workshop-TR) - Some DevOps basic notes from workshop.
   
   🔹 [Amazon Web Scraping](https://github.com/sweNNN-svg/Amazon-Web-Scraping) - Extracting product data using Python and BeautifulSoup.
