@@ -29,7 +29,7 @@
   
   🔹 [Amazon Web Scraping](https://github.com/sweNNN-svg/Amazon-Web-Scraping) - Extracting product data using Python and BeautifulSoup.
   
-  🔹 [DATA ETL](https://github.com/sweNNN-svg/CaykurDataAnalysis](https://github.com/sweNNN-svg/Anime-Data-ETL-to-PostgreSQL) - Processing an anime dataset with an ETL pipeline to PostgreSQL.
+  🔹 [DATA ETL](https://github.com/sweNNN-svg/Anime-Data-ETL-to-PostgreSQL) - Processing an anime dataset with an ETL pipeline to PostgreSQL.
   
   🔹 [ArayuzWithPython](https://github.com/sweNNN-svg/ArayuzWithPython) - ArayuzWithPython.
 </p>
