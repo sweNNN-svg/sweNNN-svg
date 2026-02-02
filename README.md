@@ -1,4 +1,4 @@
-# Emre Hacıoğlu 👋  
+# Emre H. 👋  
 **Data Platform Engineer | DataOps | ETL Architecture | Observability**
 
 Building production-grade data platforms that transform raw data into reliable, observable systems.
