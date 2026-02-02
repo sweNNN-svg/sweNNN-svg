@@ -1,117 +1,62 @@
-# Emre H. 👋  
-**Data Platform Engineer | DataOps | ETL Architecture | Observability**
+# Hi there, I'm Emre! 👋
 
-Building production-grade data platforms that transform raw data into reliable, observable systems.
-
----
-
-## ⚙️ Core Stack
-
-### 👨‍💻 Languages
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white"/>
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white"/>
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=sweNNN-svg&label=Profile%20Views&color=blue&style=flat" alt="profile views" />
 </p>
 
----
+## 🚀 About Me
+I am a **Data Engineer** focused on building and operating production-grade **ETL/ELT pipelines** using **Python**, **SQL**, and **Airflow**. My background includes enterprise-scale data systems and hands-on platform-level data engineering projects.
 
-### 📊 Data & Orchestration
-<p>
-  <img src="https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=apache-airflow&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Data%20Modeling-FF6F00?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/ETL%20%2F%20ELT-4CAF50?style=for-the-badge"/>
+- 🔭 **Current Focus:** Designing data ingestion, transformation, and orchestration workflows with a strong emphasis on reliability, observability, and automation.
+- 🛠️ **Core Stack:** Python (Pandas, FastAPI), SQL (PostgreSQL, MySQL), Apache Airflow, and Docker.
+- 📊 **Observability:** Monitoring data pipelines using Grafana and Zabbix.
+- 🎓 **Education:** Currently pursuing an **M.Sc. in Entrepreneurship & Innovation Management** at KTU.
+
+## 🛠️ Technologies & Tools
+
+**Core Technical Skills:**
+<p align="left">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=apache-airflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white" />
+  <img src="https://img.shields.io/badge/Airbyte-655CFC?style=for-the-badge&logo=airbyte&logoColor=white" />
 </p>
 
----
-
-### 🧱 Platform & Infrastructure
-<p>
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Terraform-623CE4?style=for-the-badge&logo=terraform&logoColor=white"/>
+**Infrastructure & DevOps:**
+<p align="left">
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" />
+  <img src="https://img.shields.io/badge/Terraform-623CE4?style=for-the-badge&logo=terraform&logoColor=white" />
+  <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white" />
+  <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" />
+  <img src="https://img.shields.io/badge/Zabbix-EE0000?style=for-the-badge&logo=zabbix&logoColor=white" />
 </p>
 
----
+## 📌 Featured Projects
 
-### 🔍 Observability
-<p>
-  <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Zabbix-EE0000?style=for-the-badge&logo=zabbix&logoColor=white"/>
-</p>
+### 🔹 [End-to-End Event Ingestion & Analytics Platform](https://github.com/sweNNN-svg/E-Ticaret_Veri_Ambari_Projesi.git)
+*Designed and implemented a data platform simulating real-world event ingestion.*
+- Built a high-throughput ingestion API using **FastAPI** to collect raw event data into **PostgreSQL**.
+- Developed **Airflow-based ETL workflows** to transform raw events into analytics-ready tables.
+- Containerized all services using **Docker Compose** and implemented **Grafana** dashboards for pipeline health monitoring.
 
----
+### 🔹 [Custom ETL Pipeline with Python & Airflow](https://github.com/sweNNN-svg/currency_etl_pipeline.git)
+*Real-time ETL workflow for exchange rate data.*
+- Extracted hourly exchange rate data from REST APIs using **Python**.
+- Orchestrated extraction, transformation, and loading (ETL) processes with **Airflow DAGs**, including retry logic and alerting.
+- Ensured high availability with robust error handling and automated retries.
 
-## 🚀 What I Do
+### 🔹 [Anime Data ETL](https://github.com/sweNNN-svg/Anime-Data-ETL-to-PostgreSQL)
+- Processing an anime dataset with an ETL pipeline to PostgreSQL.
 
-- Build fault-tolerant ETL pipelines  
-- Design observable workflows  
-- Develop scalable data platforms  
-- Optimize systems for performance and cost  
-- Operate close to infrastructure  
+## 📈 Certifications & Education
+- 🎓 **M.Sc. Entrepreneurship & Innovation Management** - Karadeniz Technical University *(Current)*
+- 🎓 **B.Sc. Management Information Systems** - Karadeniz Technical University
+- 📜 **IBM Data Engineering Professional (v2)** - IBM
+- 📜 **PostgreSQL for Everybody Specialization** - University of Michigan
 
-I don’t just write pipelines.  
-I engineer systems teams can trust.
-
----
-
-## ⭐ Flagship Projects
-
-### 🔹 Modern Data Platform
-Production-style pipeline architecture with orchestration, monitoring, and failure handling.
-
-**Focus:** reliability, observability, operational excellence.
-
----
-
-### 🔹 Currency ELT Pipeline
-Automated ingestion pipeline with dashboards and workflow scheduling.
-
-**Focus:** workflow stability and monitoring.
-
----
-
-### 🔹 Analytical Data Warehouse
-Star schema warehouse optimized for analytical workloads.
-
-**Focus:** dimensional modeling & query performance.
-
----
-
-## 🧠 Engineering Philosophy
-
-> Reliability > Cleverness  
-> Systems > Scripts  
-> Observability is mandatory  
-
-If a pipeline cannot be trusted, it is already broken.
-
----
-
-## 📈 Certifications
-
-- IBM Data Engineering Professional Certificate  
-- DevOps School Bootcamp  
-- B.Sc. Management Information Systems  
-
----
-
-## 🎯 Current Direction
-
-Deepening expertise in:
-
-- Data Platform Architecture  
-- Distributed Systems  
-- Kubernetes-native tooling  
-- Streaming pipelines  
-- Advanced observability  
-
-Target trajectory → **Data Platform Ownership**
-
----
-
-## 📬 Contact
-
-📧 emre.ofleep@gmail.com  
-🔗 LinkedIn: https://www.linkedin.com/in/emre-h  
-🐦 https://x.com/EmreHacioglu61
+## 📬 Connect with Me
+📧 **Email:** emre_hacimustafaoglu@outlook.com
+🔗 **LinkedIn:** [Emre Hacımustafaoğlu](https://www.linkedin.com/in/emre-h)
