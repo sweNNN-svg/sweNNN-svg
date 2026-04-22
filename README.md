@@ -18,34 +18,44 @@ I'm a **Data & AI Engineer** based in Trabzon, Turkey. I build production-grade 
 
 ## Featured Projects
 
-### [SAP Ticket Router](https://github.com/sweNNN-svg/sap-ticket-router)
-*Hybrid classification system: Rule Engine → TF-IDF → LLM fallback*
+### [Turkish Enterprise RAG — with Evaluation](https://github.com/sweNNN-svg/turkish-rag-eval)
+**Production-grade Turkish RAG pipeline with automated quality scoring**
 
-- Three-layer architecture: rule engine handles known TCODEs at 100% confidence with zero API cost, TF-IDF covers familiar patterns offline, LLM fallback handles only ambiguous tickets
+- End-to-end pipeline: PDF/DOCX → chunker → Qdrant → LangChain → Claude → RAGAS → PostgreSQL → Grafana
+- Every query automatically scored on **Faithfulness** and **Answer Relevancy** via RAGAS (reference-free, no ground truth needed)
+- Benchmarked two chunking strategies on identical documents: **fixed** (faithfulness 0.33, ~3.8s) vs **semantic** (0.42, ~10s) — quantified trade-off instead of assuming
+- Eval results persisted in PostgreSQL for longitudinal analysis: drift detection, model version comparison, Grafana alerts on quality degradation
+- Qdrant chosen over Chroma for production-grade filtering, payload indexing, and horizontal scaling
+
+---
+
+### [SAP Ticket Router](https://github.com/sweNNN-svg/sap-ticket-router)
+**Hybrid classification system: Rule Engine → TF-IDF → LLM fallback**
+
+- Three-layer architecture: rule engine handles known TCODEs at 100% confidence with zero API cost, TF-IDF covers familiar patterns offline, Claude Haiku fallback handles only ambiguous tickets — minimizing both latency and API spend
 - Prompt engineered for deterministic JSON output with `temperature=0.1`
+- Covers 10 SAP modules (FI/CO, MM, SD, HR, PP, PM, QM, Basis, Authorization, E-Solutions)
 - Built from real experience managing 250+ SAP BW/4HANA process chains at enterprise scale
 
+---
+
 ### [Secure On-Premise LLM Gateway](https://github.com/sweNNN-svg/secure-llm-gateway-onprem)
-*100% on-premise LLM usage with DLP layer*
+**100% on-premise LLM usage with DLP layer**
 
 - Intercepts and masks sensitive data (PII, credit card info) before it leaves the local network
 - KVKK/GDPR compliant, runs in isolated Docker environments
 - Designed for enterprises that need LLM capabilities without cloud data exposure
 
-### [LLM RAG Pipeline](https://github.com/sweNNN-svg/llm-rag-demo)
-*Production-grade retrieval-augmented generation*
+---
 
-- `RecursiveCharacterTextSplitter` with chunk_size=500, overlap=50 — tuned for document structure
-- Qdrant vector store (self-hosted, persistent-ready) with cosine similarity, top_k=3
-- System/user prompt separation: role definition in system, query in user
-- `temperature=0.1` for consistent, grounded responses
+### [Event Tracking & Analytics Platform](https://github.com/sweNNN-svg/data-ingestion-analytics-platform)
+**End-to-end telemetry platform with decoupled microservice architecture**
 
-### [Event Tracking & Analytics Platform](https://github.com/sweNNN-svg/E-Ticaret_Veri_Ambari_Projesi)
-*End-to-end telemetry platform — 1M+ events/day*
-
-- High-throughput ingestion API with FastAPI → PostgreSQL
-- Airflow-based ETL with dbt quality checks, retry logic, dependency management
-- Full observability via Grafana dashboards
+- Four-service Docker Compose stack: FastAPI ingestion → PostgreSQL (raw + analytics layers) → Python ETL worker → Next.js dashboard
+- Decoupled ingestion from processing so API latency stays low under load while ETL scales independently (horizontal scaling)
+- Idempotent ETL via `DELETE → INSERT` pattern — same time window can be reprocessed 100x with identical results; safe against retries and partial failures
+- Solved service startup race conditions with Docker `healthcheck` + `depends_on` + in-service retry logic for self-healing resilience
+- Resolved cross-container CORS/networking by separating server-side vs client-side request paths
 
 ---
 
