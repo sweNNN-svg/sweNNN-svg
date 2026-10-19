@@ -1,99 +1,75 @@
-# Hi, I'm Emre 👋
+# Emre Hacımustafaoğlu
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=sweNNN-svg&label=Profile%20Views&color=blue&style=flat" alt="profile views" />
-</p>
+Infrastructure and systems engineer in Trabzon, Turkey.
 
-## About Me
+I work on the operational side of systems: keeping them running, making their behaviour measurable, and removing manual work around them. My background is in data engineering, and I bring that to operations: collect the signal, check it, store it, and act on evidence rather than on assumptions.
 
-I'm a **Data & AI Engineer** based in Trabzon, Turkey. I build production-grade LLM systems, RAG pipelines, and data infrastructure — with a focus on observability, security, and systems that are defensible at every layer.
+## Now
 
-- 🔭 **Current Focus:** LLM integration, RAG pipelines, on-premise AI infrastructure with DLP layers
-- 🛠️ **Core Stack:** Python, FastAPI, Apache Airflow, dbt, Snowflake, PostgreSQL, Docker
-- 🤖 **AI/LLM:** Anthropic API, LangChain, Qdrant, sentence-transformers, RAG, prompt engineering
-- 📊 **Observability:** Grafana, Zabbix, OpenTelemetry — applied to both data pipelines and LLM systems
-- 🎓 **Education:** M.Sc. Entrepreneurship & Innovation Management, Karadeniz Technical University *(ongoing)*
+- **Corporate Infrastructure and Systems Specialist** at Turkcell Global Bilgi (since June 2026). I run endpoint management across several sites in a regulated sector: staged patch rollouts, health checks, root-cause analysis, and the documentation that keeps all of it repeatable.
+- Building a daily health and early-warning pipeline for that environment: a read-only collector on each site, validated output (manifest and hashes), a time-series store, and a dashboard that flags problems before someone has to report them.
+- Studying site reliability engineering (SLOs, toil, incident reviews) and how the same ideas apply to systems built on LLMs.
 
----
+## How I work
 
-## Featured Projects
+- Measure first. A guess is labelled as a guess until there is evidence.
+- Every change has a check before, a check after, and a written way back.
+- One step at a time on production systems. No step depends on output I have not seen.
+- Write it down: runbooks, handover notes, and short decision records with the context and the trade-offs.
+- Collect only the data the task needs. Personal data stays out unless there is a clear reason and a clear owner.
+- Keep it simple. A new component is added when a real requirement needs it, not before.
 
-### [Turkish Enterprise RAG — with Evaluation](https://github.com/sweNNN-svg/turkish-rag-eval)
-**Production-grade Turkish RAG pipeline with automated quality scoring**
+## Experience
 
-- End-to-end pipeline: PDF/DOCX → chunker → Qdrant → LangChain → Claude → RAGAS → PostgreSQL → Grafana
-- Every query automatically scored on **Faithfulness** and **Answer Relevancy** via RAGAS (reference-free, no ground truth needed)
-- Benchmarked two chunking strategies on identical documents: **fixed** (faithfulness 0.33, ~3.8s) vs **semantic** (0.42, ~10s) — quantified trade-off instead of assuming
-- Eval results persisted in PostgreSQL for longitudinal analysis: drift detection, model version comparison, Grafana alerts on quality degradation
-- Qdrant chosen over Chroma for production-grade filtering, payload indexing, and horizontal scaling
+**Turkcell Global Bilgi**, Corporate Infrastructure and Systems Specialist, 2026 to present
+Endpoint management and patching across multiple sites; measured rollout planning; incident and root-cause analysis; health monitoring.
 
----
+**Freelance**, Data and AI Engineering (Upwork)
+Data pipelines and LLM integrations for clients.
+
+**Atos**, System Administrator, 2024 to 2025
+Monitored 250+ SAP BW/4HANA process chains daily, handled incidents and root-cause analysis under SLAs, and built a ticket classification tool on my own initiative.
+
+## Projects
+
+### [Turkish RAG with Evaluation](https://github.com/sweNNN-svg/turkish-rag-eval)
+RAG pipeline for Turkish corporate documents where every answer is scored, not assumed.
+- PDF/DOCX → chunking → Qdrant → LangChain → Claude → RAGAS → PostgreSQL → Grafana
+- Faithfulness and answer relevancy are stored for each query, so quality can be followed over time and compared across model or chunking changes.
+- Fixed and semantic chunking compared on the same documents: semantic chunking scored higher on faithfulness (0.42 vs 0.33) at about 2.5 times the latency. The numbers are modest; the point was to measure the trade-off.
 
 ### [SAP Ticket Router](https://github.com/sweNNN-svg/sap-ticket-router)
-**Hybrid classification system: Rule Engine → TF-IDF → LLM fallback**
+Three-layer ticket classifier: rule engine → TF-IDF → LLM fallback.
+Known cases are resolved by rules at no API cost, familiar patterns by TF-IDF offline, and only ambiguous tickets reach the LLM. Based on what I saw while operating SAP BW/4HANA in production.
 
-- Three-layer architecture: rule engine handles known TCODEs at 100% confidence with zero API cost, TF-IDF covers familiar patterns offline, Claude Haiku fallback handles only ambiguous tickets — minimizing both latency and API spend
-- Prompt engineered for deterministic JSON output with `temperature=0.1`
-- Covers 10 SAP modules (FI/CO, MM, SD, HR, PP, PM, QM, Basis, Authorization, E-Solutions)
-- Built from real experience managing 250+ SAP BW/4HANA process chains at enterprise scale
+### [On-Premise LLM Gateway](https://github.com/sweNNN-svg/secure-llm-gateway-onprem)
+Local LLM gateway with a masking layer that removes personal data (such as ID and card numbers) before a prompt leaves the network. Runs in Docker; designed with KVKK and GDPR constraints in mind.
 
----
+### [Event Tracking and Analytics Platform](https://github.com/sweNNN-svg/data-ingestion-analytics-platform)
+FastAPI ingestion → PostgreSQL (raw and analytics layers) → Python ETL worker → Next.js dashboard, on Docker Compose.
+- Ingestion is decoupled from processing.
+- Idempotent ETL (delete then insert per time window), safe to re-run after a failure.
+- Service startup order handled with health checks and retries.
 
-### [Secure On-Premise LLM Gateway](https://github.com/sweNNN-svg/secure-llm-gateway-onprem)
-**100% on-premise LLM usage with DLP layer**
+## Tools
 
-- Intercepts and masks sensitive data (PII, credit card info) before it leaves the local network
-- KVKK/GDPR compliant, runs in isolated Docker environments
-- Designed for enterprises that need LLM capabilities without cloud data exposure
-
----
-
-### [Event Tracking & Analytics Platform](https://github.com/sweNNN-svg/data-ingestion-analytics-platform)
-**End-to-end telemetry platform with decoupled microservice architecture**
-
-- Four-service Docker Compose stack: FastAPI ingestion → PostgreSQL (raw + analytics layers) → Python ETL worker → Next.js dashboard
-- Decoupled ingestion from processing so API latency stays low under load while ETL scales independently (horizontal scaling)
-- Idempotent ETL via `DELETE → INSERT` pattern — same time window can be reprocessed 100x with identical results; safe against retries and partial failures
-- Solved service startup race conditions with Docker `healthcheck` + `depends_on` + in-service retry logic for self-healing resilience
-- Resolved cross-container CORS/networking by separating server-side vs client-side request paths
-
----
-
-## Tech Stack
-
-**AI / LLM**
-![Anthropic](https://img.shields.io/badge/Anthropic_API-191919?style=for-the-badge&logo=anthropic&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
-![Qdrant](https://img.shields.io/badge/Qdrant-DC244C?style=for-the-badge)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
-
-**Data Engineering**
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Apache Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=apache-airflow&logoColor=white)
-![dbt](https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white)
-![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-
-**Infrastructure & Observability**
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
-![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-000000?style=for-the-badge&logo=opentelemetry&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-
----
+**Operations:** Windows Server, Microsoft Configuration Manager, PowerShell, SQL Server, IIS, Linux
+**Observability:** Grafana, Zabbix, OpenTelemetry
+**Data:** Python, SQL, PostgreSQL, SQLite, Apache Airflow, dbt, Snowflake, Docker, FastAPI
+**LLM:** Anthropic API, LangChain, Qdrant, RAGAS, MCP
 
 ## Certifications
 
-- 📜 Snowflake Data Engineering — Snowflake *(2026)*
-- 📜 Apache Airflow 3 Fundamentals — Astronomer *(2026)*
-- 📜 dbt Fundamentals — dbt Labs *(2026)*
-- 📜 IBM Data Engineering Professional (v2) — IBM *(2024)*
-- 📜 PostgreSQL for Everybody Specialization — University of Michigan
+- Snowflake Data Engineering, Snowflake (2026)
+- Apache Airflow 3 Fundamentals, Astronomer (2026)
+- dbt Fundamentals, dbt Labs (2026)
+- IBM Data Engineering Professional (v2), IBM (2024)
+- PostgreSQL for Everybody Specialization, University of Michigan
 
----
+## Education
 
-## Connect
+B.Sc. Management Information Systems, Karadeniz Technical University (2023)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emre-hacimustafaoglu)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:emre_hacimustafaoglu@outlook.com)
+## Contact
+
+[LinkedIn](https://www.linkedin.com/in/emre-hacimustafaoglu) · [Email](mailto:emre_hacimustafaoglu@outlook.com)
